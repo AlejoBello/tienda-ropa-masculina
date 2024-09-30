@@ -107,3 +107,11 @@ function removeFromCart(index) {
     saveCart();
     displayCart();
 }
+
+document.querySelectorAll('.increase').forEach(button => {
+    button.addEventListener('click', function() {
+        const productName = this.closest('tr').querySelector('td').innerText;
+        addToCart(productName, getPriceByProductName(productName)); // Usa la función que ya tienes
+        displayCart();
+    });
+});
