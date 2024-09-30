@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa Masculina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Tienda de Ropa Masculina</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Bienvenidos a nuestra Tienda de Ropa</h2>
+            <p>Explora nuestra selección de ropa masculina.</p>
+        </section>
+
+        <section id="productos" class="productos">
+            <h2>Productos Disponibles</h2>
+            <div class="grid-container">
+                <div class="producto">
+                    <img src="img/producto1.jpg" alt="Camiseta Básica">
+                    <h3>Camiseta Básica</h3>
+                    <p>$10.00</p>
+                    <button onclick="addToCart('Camiseta Básica', 10)">Añadir al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto2.jpg" alt="Pantalón Chino">
+                    <h3>Pantalón Chino</h3>
+                    <p>$25.00</p>
+                    <button onclick="addToCart('Pantalón Chino', 25)">Añadir al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto3.jpg" alt="Chaqueta Deportiva">
+                    <h3>Chaqueta Deportiva</h3>
+                    <p>$40.00</p>
+                    <button onclick="addToCart('Chaqueta Deportiva', 40)">Añadir al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto4.jpg" alt="Jeans Slim Fit">
+                    <h3>Jeans Slim Fit</h3>
+                    <p>$30.00</p>
+                    <button onclick="addToCart('Jeans Slim Fit', 30)">Añadir al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto5.jpg" alt="Polo Casual">
+                    <h3>Polo Casual</h3>
+                    <p>$15.00</p>
+                    <button onclick="addToCart('Polo Casual', 15)">Añadir al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto6.jpg" alt="Shorts de Verano">
+                    <h3>Shorts de Verano</h3>
+                    <p>$20.00</p>
+                    <button onclick="addToCart('Shorts de Verano', 20)">Añadir al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto7.jpg" alt="Sudadera con Capucha">
+                    <h3>Sudadera con Capucha</h3>
+                    <p>$35.00</p>
+                    <button onclick="addToCart('Sudadera con Capucha', 35)">Añadir al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto8.jpg" alt="Zapatos Deportivos">
+                    <h3>Zapatos Deportivos</h3>
+                    <p>$50.00</p>
+                    <button onclick="addToCart('Zapatos Deportivos', 50)">Añadir al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto9.jpg" alt="Corbata Elegante">
+                    <h3>Corbata Elegante</h3>
+                    <p>$12.00</p>
+                    <button onclick="addToCart('Corbata Elegante', 12)">Añadir al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto10.jpg" alt="Camisa Formal">
+                    <h3>Camisa Formal</h3>
+                    <p>$28.00</p>
+                    <button onclick="addToCart('Camisa Formal', 28)">Añadir al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto11.jpg" alt="Reloj Deportivo">
+                    <h3>Reloj Deportivo</h3>
+                    <p>$60.00</p>
+                    <button onclick="addToCart('Reloj Deportivo', 60)">Añadir al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto12.jpg" alt="Cinturón de Cuero">
+                    <h3>Cinturón de Cuero</h3>
+                    <p>$18.00</p>
+                    <button onclick="addToCart('Cinturón de Cuero', 18)">Añadir al Carrito</button>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>© 2024 Tienda de Ropa Masculina</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
