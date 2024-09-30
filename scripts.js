@@ -41,7 +41,9 @@ function displayCart() {
     const cartTableBody = document.querySelector("#cart tbody");
     cartTableBody.innerHTML = "";
 
-    cart.forEach(product => {
+    let total = 0;
+
+    cart.forEach((product, index) => {
         const row = document.createElement("tr");
 
         row.innerHTML = `
@@ -49,11 +51,22 @@ function displayCart() {
             <td>${product.quantity}</td>
             <td>$${product.price}</td>
             <td>$${(product.price * product.quantity).toFixed(2)}</td>
+            <td>
+                <button onclick="decreaseQuantity(${index})">-</button>
+                <button onclick="removeFromCart(${index})">Eliminar</button>
+            </td>
         `;
 
         cartTableBody.appendChild(row);
+
+        // Sumar el total
+        total += product.price * product.quantity;
     });
+
+    document.getElementById('total').textContent = `Total: $${total.toFixed(2)}`;
 }
+
+
 
 // Función para limpiar el carrito
 function limpiarCarrito() {
@@ -77,3 +90,20 @@ window.onload = function() {
         displayCart();
     }
 };
+
+
+function decreaseQuantity(index) {
+    if (cart[index].quantity > 1) {
+        cart[index].quantity -= 1;
+    } else {
+        cart.splice(index, 1);  // Eliminar si la cantidad es 1
+    }
+    saveCart();
+    displayCart();
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    saveCart();
+    displayCart();
+}
