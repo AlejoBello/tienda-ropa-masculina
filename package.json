@@ -13,5 +13,9 @@
     "sinon": "^19.0.2"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^3.11.3",
+    "sequelize": "^6.37.5"
+  }
 }
